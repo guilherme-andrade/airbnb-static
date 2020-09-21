@@ -1,0 +1,13 @@
+<h1>Flats</h1>
+
+<% @flats.each do |flat| %>
+	<%= link_to flat_path(flat['id']) do %>
+		<%= image_tag flat.dig('imageUrl'), width: 400 %>
+		<p>
+			<strong>
+				<%= flat.dig('name') %>
+			</strong> -
+			<%= flat.dig('price') %>
+		</p>
+	<% end %>
+<% end %>
